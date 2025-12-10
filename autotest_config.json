@@ -8,7 +8,7 @@
             "_security_scan_report_conclusion": "failure",
             "_comment_security_scan_report_conclusion": "Optional. Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status. If not provided, this check will not be performed.",
             "total_libs_scanned": {
-                "eq": 25
+                "eq": 64
             },
             "_comment_total_libs_scanned": "Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries."
         },
@@ -18,50 +18,85 @@
             "check_dependency_tree_detection_status": true,
             "_comment_check_dependency_tree_detection_status": "Whether to check if dependency tree was successfully detected. Options: true | false. Default: true",
             "expected_total_dependencies_number": {
-                "eq": 43
+                "eq": 130
             },
             "expected_direct_dependencies_number": {
-                "eq": 13
+                "eq": 35
             },
             "expected_transitive_dependencies_number": {
-                "eq": 30
+                "eq": 95
             },
             "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
             "direct_dependencies_names_list": {
                 "eq": [
-                    "pydantic-settings",
-                    "httpx-sse",
-                    "httpx",
-                    "pyjwt",
-                    "pydantic",
-                    "python-multipart",
-                    "sse-starlette",
-                    "typing-inspection",
-                    "uvicorn",
+                    "mcp-simple-tool",
+                    "certifi-2025.11.12-py3-none-any.whl",
+                    "idna-3.11-py3-none-any.whl",
+                    "python_dotenv-1.2.1-py3-none-any.whl",
                     "starlette",
+                    "uvicorn-0.38.0-py3-none-any.whl",
+                    "anyio",
+                    "mcp-simple-auth-client",
+                    "python-multipart",
+                    "typing-inspection",
+                    "pydantic",
+                    "mcp-simple-pagination",
+                    "typing_extensions-4.15.0-py3-none-any.whl",
+                    "mcp-simple-resource",
+                    "mcp-conformance-auth-client",
+                    "h11-0.16.0-py3-none-any.whl",
+                    "sse-starlette",
+                    "pydantic-settings",
+                    "mcp-simple-auth",
+                    "mcp-simple-streamablehttp-stateless",
+                    "httpx",
+                    "mcp-simple-streamablehttp",
+                    "pyjwt",
+                    "uvicorn",
+                    "click-8.1.8-py3-none-any.whl",
+                    "httpx-sse",
+                    "urllib3-2.6.1-py3-none-any.whl",
                     "jsonschema",
-                    "typing-extensions",
-                    "anyio"
+                    "mcp-simple-prompt",
+                    "requests-2.32.5-py3-none-any.whl",
+                    "mcp-simple-chatbot",
+                    "mcp-snippets",
+                    "charset_normalizer-3.4.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+                    "mcp-everything-server",
+                    "typing-extensions"
                 ]
             },
             "transitive_dependencies_names_list": {
                 "eq": [
-                    "annotated-types",
-                    "typing-inspection",
-                    "h11",
-                    "pydantic",
-                    "python-dotenv",
-                    "rpds-py",
-                    "click",
-                    "certifi",
                     "referencing",
+                    "rpds-py",
                     "httpcore",
-                    "typing-extensions",
-                    "attrs",
-                    "pydantic-core",
+                    "starlette",
+                    "anyio",
                     "jsonschema-specifications",
+                    "python-multipart",
+                    "typing-inspection",
+                    "mcp",
+                    "attrs",
+                    "requests",
                     "idna",
-                    "anyio"
+                    "pydantic",
+                    "certifi",
+                    "sse-starlette",
+                    "pydantic-settings",
+                    "python-dotenv",
+                    "httpx",
+                    "pyjwt",
+                    "annotated-types",
+                    "uvicorn",
+                    "httpx-sse",
+                    "h11",
+                    "jsonschema",
+                    "urllib3",
+                    "pydantic-core",
+                    "typing-extensions",
+                    "click",
+                    "charset-normalizer"
                 ]
             },
             "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
